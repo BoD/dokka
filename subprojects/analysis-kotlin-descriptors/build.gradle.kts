@@ -8,6 +8,7 @@ plugins {
 }
 
 dependencies {
+    api(libs.intellij.java.psi.impl)
     implementation(projects.subprojects.analysisKotlinApi)
     implementation(projects.subprojects.analysisKotlinDescriptors.compiler)
     implementation(projects.subprojects.analysisKotlinDescriptors.ide)
@@ -24,6 +25,7 @@ tasks {
     //    a single jar provides some stability for the CLI users, while not exposing too many internals. Publishing
     //    the compiler, ide and other subprojects separately would make it difficult to refactor the project structure.
     shadowJar {
+        isZip64 = true
         val dokka_version: String by project
 
         // cannot be named exactly like the artifact (i.e analysis-kotlin-descriptors-VER.jar),

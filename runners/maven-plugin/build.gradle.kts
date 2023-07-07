@@ -114,6 +114,6 @@ tasks.jar {
 }
 
 
-registerDokkaArtifactPublication("dokkaMavenPlugin") {
-    artifactId = "dokka-maven-plugin"
-}
+//registerDokkaArtifactPublication("dokkaMavenPlugin") {
+//    artifactId = "dokka-maven-plugin"
+//}

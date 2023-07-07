@@ -1,3 +1,29 @@
+public final class com/intellij/openapi/vfs/DokkaCompactVirtualFileSet : java/util/AbstractSet, com/intellij/openapi/vfs/VirtualFileSetEx {
+	public fun <init> ()V
+	public fun <init> (Lit/unimi/dsi/fastutil/ints/IntSet;)V
+	public fun <init> (Ljava/util/Collection;)V
+	public fun add (Lcom/intellij/openapi/vfs/VirtualFile;)Z
+	public synthetic fun add (Ljava/lang/Object;)Z
+	public fun addAll (Ljava/util/Collection;)Z
+	public fun clear ()V
+	public fun contains (Ljava/lang/Object;)Z
+	public fun containsId (I)Z
+	public fun freeze ()V
+	public fun freezed ()Ljava/util/Set;
+	public fun iterator ()Ljava/util/Iterator;
+	public fun onlyInternalFileIds ()[I
+	public fun process (Lcom/intellij/util/Processor;)Z
+	public fun remove (Ljava/lang/Object;)Z
+	public fun retainAll (Ljava/util/Collection;)Z
+	public fun size ()I
+}
+
+public final class com/intellij/openapi/vfs/DokkaCompactVirtualFileSetFactory : com/intellij/openapi/vfs/VirtualFileSetFactory {
+	public fun <init> ()V
+	public fun createCompactVirtualFileSet ()Lcom/intellij/openapi/vfs/VirtualFileSet;
+	public fun createCompactVirtualFileSet (Ljava/util/Collection;)Lcom/intellij/openapi/vfs/VirtualFileSet;
+}
+
 public abstract interface class org/jetbrains/dokka/analysis/kotlin/descriptors/compiler/AnalysisContextCreator {
 	public abstract fun create (Lcom/intellij/mock/MockProject;Lorg/jetbrains/kotlin/descriptors/ModuleDescriptor;Lorg/jetbrains/kotlin/analyzer/ResolverForModule;Lorg/jetbrains/kotlin/cli/jvm/compiler/KotlinCoreEnvironment;Lorg/jetbrains/dokka/analysis/kotlin/descriptors/compiler/configuration/AnalysisEnvironment;)Lorg/jetbrains/dokka/analysis/kotlin/descriptors/compiler/configuration/AnalysisContext;
 }
@@ -39,7 +65,7 @@ public final class org/jetbrains/dokka/analysis/kotlin/descriptors/compiler/KDoc
 }
 
 public abstract interface class org/jetbrains/dokka/analysis/kotlin/descriptors/compiler/KLibService {
-	public abstract fun createPackageFragmentProvider (Lorg/jetbrains/kotlin/library/KotlinLibrary;Lorg/jetbrains/kotlin/storage/StorageManager;Lorg/jetbrains/kotlin/backend/common/serialization/metadata/KlibMetadataModuleDescriptorFactory;Lorg/jetbrains/kotlin/config/LanguageVersionSettings;Lorg/jetbrains/kotlin/descriptors/ModuleDescriptor;Lorg/jetbrains/kotlin/incremental/components/LookupTracker;)Lorg/jetbrains/kotlin/descriptors/PackageFragmentProvider;
+	public abstract fun createPackageFragmentProvider (Lorg/jetbrains/kotlin/library/KotlinLibrary;Lorg/jetbrains/kotlin/storage/StorageManager;Lorg/jetbrains/kotlin/library/metadata/KlibMetadataModuleDescriptorFactory;Lorg/jetbrains/kotlin/config/LanguageVersionSettings;Lorg/jetbrains/kotlin/descriptors/ModuleDescriptor;Lorg/jetbrains/kotlin/incremental/components/LookupTracker;)Lorg/jetbrains/kotlin/descriptors/PackageFragmentProvider;
 	public abstract fun isAnalysisCompatible (Lorg/jetbrains/kotlin/library/KotlinLibrary;)Z
 }
 

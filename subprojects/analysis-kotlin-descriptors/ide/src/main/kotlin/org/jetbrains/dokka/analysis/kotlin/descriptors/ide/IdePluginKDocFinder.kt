@@ -20,11 +20,11 @@ internal class IdePluginKDocFinder(
 ) : KDocFinder {
 
     override fun KtElement.findKDoc(): KDocTag? {
-        return this.findKDoc { DescriptorToSourceUtils.descriptorToDeclaration(it) }
+        return this.findKDoc { DescriptorToSourceUtils.descriptorToDeclaration(it) }?.contentTag
     }
 
     override fun DeclarationDescriptor.find(descriptorToPsi: (DeclarationDescriptorWithSource) -> PsiElement?): KDocTag? {
-        return this.findKDoc(descriptorToPsi)
+        return this.findKDoc(descriptorToPsi)?.contentTag
     }
 
     override fun resolveKDocLink(

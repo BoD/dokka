@@ -13,6 +13,9 @@ dependencies {
     api(libs.kotlin.idePlugin.core)
     api(libs.kotlin.idePlugin.native)
 
+    api(libs.intellij.base.fe10.analysis)
+    api(libs.intellij.base.fe10.kdoc)
+
     // TODO [beresnev] needed for CommonIdePlatformKind, describe
     implementation(libs.kotlin.jps.common)
 

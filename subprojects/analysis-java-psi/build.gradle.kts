@@ -10,9 +10,6 @@ dependencies {
     implementation(projects.subprojects.analysisMarkdownJb)
 
     implementation(libs.intellij.java.psi.impl)
-    implementation(libs.intellij.platform.util.api)
-    implementation(libs.intellij.platform.util.rt)
-
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.jsoup)
 }
